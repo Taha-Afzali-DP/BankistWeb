@@ -61,7 +61,7 @@ massage.style.width = '107%';
 console.log(getComputedStyle(massage).color);
 massage.style.height =
   Number.parseFloat(getComputedStyle(massage).height, 10) + 30 + 'px';
-document.documentElement.style.setProperty('--color-primary', 'orangered');
+// document.documentElement.style.setProperty('--color-primary', 'orangered');
 //! Attribut
 const logo = document.querySelector('.nav__logo');
 logo.alt = 'logo icon';
@@ -97,3 +97,12 @@ btnScrollTo.addEventListener('click', function (e) {
     behavior: 'smooth',
   });
 });
+const h1 = document.querySelector('h1');
+const alertH1 = function (e) {
+  alert('EventListner: Green!');
+  h1.removeEventListener('mouseenter', alertH1);
+};
+h1.addEventListener('mouseenter', alertH1);
+// h1.onmouseenter = function (e) {
+//   alert('EventListner: Green!');
+// };
