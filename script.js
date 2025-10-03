@@ -74,3 +74,26 @@ const link = document.querySelector('.nav__link--btn');
 console.log(link.href);
 console.log(link.getAttribute('href'));
 //! data attribute
+
+//TODO btn scroll to (learn more)
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+btnScrollTo.addEventListener('click', function (e) {
+  const s1coords = section1.getBoundingClientRect();
+
+  console.log('X/Y', window.pageXOffset, window.pageYOffset);
+  console.log(
+    'Height/width',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+  //? scrolling
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageXOffset,
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: 'smooth',
+  // });
+  section1.scrollIntoView({
+    behavior: 'smooth',
+  });
+});
