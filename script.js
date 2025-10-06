@@ -1,12 +1,15 @@
 'use strict';
 
 ///////////////////////////////////////
-// Modal window
-
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
+const header = document.querySelector('.header');
+const massage = document.createElement('div');
+// Modal window
 
 const openModal = function (e) {
   e.preventDefault();
@@ -39,8 +42,7 @@ const allButtons = document.getElementsByTagName('button');
 console.log(allButtons);
 document.getElementsByClassName('btn');
 */
-const header = document.querySelector('.header');
-const massage = document.createElement('div');
+
 massage.classList.add('cookie-message');
 // massage.textContent = 'we use cooked for improved fuctionality and analitys.';
 massage.innerHTML =
@@ -58,11 +60,12 @@ document
 //! styles
 massage.style.backgroundColor = '#37383d';
 massage.style.width = '107%';
-console.log(getComputedStyle(massage).color);
+// console.log(getComputedStyle(massage).color);
 massage.style.height =
   Number.parseFloat(getComputedStyle(massage).height, 10) + 30 + 'px';
 // document.documentElement.style.setProperty('--color-primary', 'orangered');
 //! Attribut
+/*
 const logo = document.querySelector('.nav__logo');
 logo.alt = 'logo icon';
 console.log(logo.alt);
@@ -74,10 +77,9 @@ const link = document.querySelector('.nav__link--btn');
 console.log(link.href);
 console.log(link.getAttribute('href'));
 //! data attribute
-
+*/
 //TODO btn scroll to (learn more)
-const btnScrollTo = document.querySelector('.btn--scroll-to');
-const section1 = document.querySelector('#section--1');
+
 btnScrollTo.addEventListener('click', function (e) {
   const s1coords = section1.getBoundingClientRect();
 
@@ -87,6 +89,7 @@ btnScrollTo.addEventListener('click', function (e) {
     document.documentElement.clientHeight,
     document.documentElement.clientWidth
   );
+
   //? scrolling
   // window.scrollTo({
   //   left: s1coords.left + window.pageXOffset,
@@ -107,7 +110,8 @@ h1.addEventListener('mouseenter', alertH1);
 // h1.onmouseenter = function (e) {
 //   alert('EventListner: Green!');
 // };
- */
+ 
+//TODO Bubeling
 const randomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
@@ -128,4 +132,27 @@ document.querySelector('.nav').addEventListener('click', function (e) {
   this.style.backgroundColor = randomColor();
   console.log('NAV', e.target, e.currentTarget);
 });
-//rgb(255,255,225)
+*/
+//TODO page links ::
+
+// document.querySelectorAll('.nav__link').forEach(el => {
+//   el.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     const id = this.getAttribute('href');
+//     document.querySelector(id).scrollIntoView({
+//       behavior: 'smooth',
+//     });
+//     console.log('LINK');
+//   });
+// });
+//! Event delegation
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
+});
