@@ -209,9 +209,9 @@ const handelHover = function (e, opacity) {
     });
   }
 };
-nav.addEventListener('mouseover', function (e) {
-  handelHover(e, 0.5);
-});
-nav.addEventListener('mouseout', function (e) {
-  handelHover(e, 1);
-});
+// nav.addEventListener('mouseover', function (e) {
+//   handelHover(e, 0.5);
+// });
+// nav.addEventListener('mouseout', function (e) {
+//   handelHover(e, 1);
+// });
