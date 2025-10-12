@@ -204,8 +204,8 @@ const handelHover = function (e, opacity) {
     const sibling = link.closest('.nav').querySelectorAll('.nav__link');
     const logo = link.closest('.nav').querySelector('img');
     sibling.forEach(el => {
-      if (el !== link) el.style.opacity = opacity;
-      logo.style.opacity = opacity;
+      if (el !== link) el.style.opacity = this;
+      logo.style.opacity = this;
     });
   }
 };
