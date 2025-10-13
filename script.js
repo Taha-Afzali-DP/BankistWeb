@@ -218,3 +218,12 @@ const handelHover = function (e) {
 //? passing "argument" into handler
 nav.addEventListener('mouseover', handelHover.bind(0.5));
 nav.addEventListener('mouseout', handelHover.bind(1));
+//! Sticky Navigaition
+const initialCoords = section1.getBoundingClientRect();
+window.addEventListener('scroll', function () {
+  if (window.scrollY > initialCoords.top) {
+    nav.classList.add('sticky');
+  } else {
+    nav.classList.remove('sticky');
+  }
+});
