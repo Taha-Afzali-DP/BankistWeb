@@ -227,3 +227,4 @@ window.addEventListener('scroll', function () {
     nav.classList.remove('sticky');
   }
 });
+//! Bankist website just priject for learning
