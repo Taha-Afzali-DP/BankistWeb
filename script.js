@@ -216,9 +216,12 @@ const handelHover = function (e) {
 //   handelHover(e, 1);
 // });
 //? passing "argument" into handler
+/*
 nav.addEventListener('mouseover', handelHover.bind(0.5));
 nav.addEventListener('mouseout', handelHover.bind(1));
+*/
 //! Sticky Navigaition
+/*
 const initialCoords = section1.getBoundingClientRect();
 window.addEventListener('scroll', function () {
   if (window.scrollY > initialCoords.top) {
@@ -227,4 +230,5 @@ window.addEventListener('scroll', function () {
     nav.classList.remove('sticky');
   }
 });
-//! Bankist website just priject for learning
+*/
+// ! Bankist website just priject for learning
