@@ -235,6 +235,7 @@ window.addEventListener('scroll', function () {
 const obsCallBack = function () {};
 const obsOptions = {
   root: null,
+  threshold: 0.1,
 };
 const observer = new IntersectionObserver(obsCallBack, obsOptions);
 observer.observe(section1);
