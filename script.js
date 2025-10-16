@@ -233,11 +233,13 @@ window.addEventListener('scroll', function () {
 */
 // ! Bankist website just priject for learning
 const obsCallBack = function (entries, observer) {
-  entries.forEach(entry => {});
+  entries.forEach(entry => {
+    console.log(entry);
+  });
 };
 const obsOptions = {
   root: null,
-  threshold: 0.1,
+  threshold: [0, 0.2],
 };
 const observer = new IntersectionObserver(obsCallBack, obsOptions);
 observer.observe(section1);
