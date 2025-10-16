@@ -246,5 +246,8 @@ const observer = new IntersectionObserver(obsCallBack, obsOptions);
 observer.observe(section1);
 */
 //? add sticky widh interasctionObserver API ::
-const headerObserver = new IntersectionObserver(stickyNav, {});
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+});
 headerObserver.observe(header);
