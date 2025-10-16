@@ -246,6 +246,11 @@ const observer = new IntersectionObserver(obsCallBack, obsOptions);
 observer.observe(section1);
 */
 //? add sticky widh interasctionObserver API ::
+const stickyNav = function (entries, observer) {
+  entries.forEach(entry => {
+    console.log(entry);
+  });
+};
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
   threshold: 0,
