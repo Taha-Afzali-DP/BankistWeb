@@ -249,6 +249,8 @@ observer.observe(section1);
 const stickyNav = function (entries) {
   const [entry] = entries;
   if (!entry.isIntersecting) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
+
   console.log(entry);
 };
 const headerObserver = new IntersectionObserver(stickyNav, {
