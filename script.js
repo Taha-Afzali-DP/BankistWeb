@@ -232,6 +232,7 @@ window.addEventListener('scroll', function () {
 });
 */
 // ! Bankist website just priject for learning
+/*
 const obsCallBack = function (entries, observer) {
   entries.forEach(entry => {
     console.log(entry);
@@ -243,6 +244,5 @@ const obsOptions = {
 };
 const observer = new IntersectionObserver(obsCallBack, obsOptions);
 observer.observe(section1);
-
+*/
 //? add sticky widh interasctionObserver API ::
-const header = document.querySelector('.header');
