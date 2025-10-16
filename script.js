@@ -236,5 +236,5 @@ const obsCallBack = function () {};
 const obsOptions = {
   root: null,
 };
-const observer = new IntersectionObserver();
+const observer = new IntersectionObserver(obsCallBack, obsOptions);
 observer.observe(section1);
