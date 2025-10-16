@@ -209,17 +209,17 @@ const handelHover = function (e) {
     });
   }
 };
-// nav.addEventListener('mouseover', function (e) {
-//   handelHover(e, 0.5);
-// });
-// nav.addEventListener('mouseout', function (e) {
-//   handelHover(e, 1);
-// });
+nav.addEventListener('mouseover', function (e) {
+  handelHover(e, 0.5);
+});
+nav.addEventListener('mouseout', function (e) {
+  handelHover(e, 1);
+});
 //? passing "argument" into handler
-/*
+
 nav.addEventListener('mouseover', handelHover.bind(0.5));
 nav.addEventListener('mouseout', handelHover.bind(1));
-*/
+
 //! Sticky Navigaition
 /*
 const initialCoords = section1.getBoundingClientRect();
