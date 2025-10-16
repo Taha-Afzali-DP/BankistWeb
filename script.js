@@ -243,3 +243,5 @@ const obsOptions = {
 };
 const observer = new IntersectionObserver(obsCallBack, obsOptions);
 observer.observe(section1);
+
+//? add sticky widh interasctionObserver API ::
