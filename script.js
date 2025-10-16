@@ -233,6 +233,8 @@ window.addEventListener('scroll', function () {
 */
 // ! Bankist website just priject for learning
 const obsCallBack = function () {};
-const obsOptions = {};
+const obsOptions = {
+  root: null,
+};
 const observer = new IntersectionObserver();
 observer.observe(section1);
