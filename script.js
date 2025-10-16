@@ -247,3 +247,4 @@ observer.observe(section1);
 */
 //? add sticky widh interasctionObserver API ::
 const headerObserver = new IntersectionObserver();
+headerObserver.observe(header);
