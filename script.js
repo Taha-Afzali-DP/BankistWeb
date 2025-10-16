@@ -233,3 +233,4 @@ window.addEventListener('scroll', function () {
 */
 // ! Bankist website just priject for learning
 const observer = new IntersectionObserver();
+observer.observe(section1);
