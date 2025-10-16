@@ -232,5 +232,6 @@ window.addEventListener('scroll', function () {
 });
 */
 // ! Bankist website just priject for learning
+const obsOptions = {};
 const observer = new IntersectionObserver();
 observer.observe(section1);
