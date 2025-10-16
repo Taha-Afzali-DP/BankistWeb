@@ -248,7 +248,8 @@ observer.observe(section1);
 //? add sticky widh interasctionObserver API ::
 const stickyNav = function (entries) {
   const [entry] = entries;
-  nav.classList.add('sticky');
+  if (!entry.isIntersecting) nav.classList.add('sticky');
+  console.log(entry);
 };
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
