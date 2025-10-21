@@ -265,7 +265,10 @@ headerObserver.observe(header);
 //! Reveal Sections
 const allSections = document.querySelectorAll('.section');
 const revealSections = function (entries, observer) {};
-const sectionObserver = new IntersectionObserver(revealSections, {});
+const sectionObserver = new IntersectionObserver(revealSections, {
+  root: null,
+  threshold: 0.15,
+});
 allSections.forEach(function (section) {
   section.classList.add('section--hidden');
   sectionObserver.observe(section);
