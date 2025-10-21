@@ -263,3 +263,5 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 headerObserver.observe(header);
 
 //! Reveal Sections
+const revealSections = function (entries, observer) {};
+const sectionObserver = new IntersectionObserver(revealSections, {});
