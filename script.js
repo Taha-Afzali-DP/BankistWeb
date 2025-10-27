@@ -280,3 +280,4 @@ allSections.forEach(function (section) {
 });
 
 //! add lazy loading for images ::
+const imgTargets = document.querySelectorAll('img[data-src]');
