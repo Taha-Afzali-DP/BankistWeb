@@ -289,6 +289,7 @@ const loadImg = function (entries, observer) {
   entry.target.addEventListener('load', function () {
     entry.target.classList.remove('lazy-img');
   });
+  observer.unobserve;
 };
 const imgObserver = new IntersectionObserver(loadImg, {
   root: null,
