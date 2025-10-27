@@ -281,5 +281,9 @@ allSections.forEach(function (section) {
 
 //! add lazy loading for images ::
 const imgTargets = document.querySelectorAll('img[data-src]');
-const imgObserver = new IntersectionObserver(loadImg, {});
+const loadImg = function (entries, observer) {};
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+});
 imgTargets.forEach(img => imgObserver.observe(img));
