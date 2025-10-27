@@ -278,3 +278,5 @@ allSections.forEach(function (section) {
   section.classList.add('section--hidden');
   sectionObserver.observe(section);
 });
+
+//! add lazy loading for images ::
