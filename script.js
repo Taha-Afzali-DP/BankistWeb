@@ -304,3 +304,6 @@ const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
 let curSlide = 0;
 Slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
+btnRight.addEventListener('click', function () {
+  curSlide++;
+});
