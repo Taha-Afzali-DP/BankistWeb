@@ -306,7 +306,11 @@ let curSlide = 0;
 const maxSlide = Slides.length;
 Slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
 btnRight.addEventListener('click', function () {
-  curSlide++;
+  if (curSlide === maxSlide - 1) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
   Slides.forEach(
     (s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`)
   );
