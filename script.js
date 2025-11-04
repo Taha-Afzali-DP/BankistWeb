@@ -299,3 +299,4 @@ const imgObserver = new IntersectionObserver(loadImg, {
 imgTargets.forEach(img => imgObserver.observe(img));
 
 //TODO ***Slider***
+const Slides = document.querySelectorAll('.slide');
