@@ -305,13 +305,17 @@ const btnRight = document.querySelector('.slider__btn--right');
 let curSlide = 0;
 const maxSlide = Slides.length;
 Slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
+const goToSlide = function (slide) {
+  Slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+  );
+};
+//* Next slide
 btnRight.addEventListener('click', function () {
   if (curSlide === maxSlide - 1) {
     curSlide = 0;
   } else {
     curSlide++;
   }
-  Slides.forEach(
-    (s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`)
-  );
+  goToSlide(curSlide);
 });
