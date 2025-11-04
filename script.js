@@ -301,4 +301,5 @@ imgTargets.forEach(img => imgObserver.observe(img));
 //TODO ***Slider***
 const Slides = document.querySelectorAll('.slide');
 const btnLeft = document.querySelector('.slider__btn--left');
+const btnRight = document.querySelector('.slider__btn--right');
 Slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
