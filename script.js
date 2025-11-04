@@ -297,3 +297,5 @@ const imgObserver = new IntersectionObserver(loadImg, {
   rootMargin: '200px',
 });
 imgTargets.forEach(img => imgObserver.observe(img));
+
+//TODO ***Slider***
