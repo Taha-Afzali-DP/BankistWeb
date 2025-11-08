@@ -345,6 +345,7 @@ const prevSlide = () => {
     curSlide--;
   }
   goToSlide(curSlide);
+  activaiteDot(curSlide);
 };
 btnRight.addEventListener('click', nextSlide);
 btnLeft.addEventListener('click', prevSlide);
