@@ -268,7 +268,7 @@ const revealSections = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
   entry.target.classList.remove('section--hidden');
-  observer.unobserve();
+  // observer.unobserve();
 };
 const sectionObserver = new IntersectionObserver(revealSections, {
   root: null,
@@ -313,6 +313,7 @@ const createDots = function () {
     );
   });
 };
+createDots();
 const goToSlide = function (slide) {
   Slides.forEach(
     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
