@@ -305,7 +305,9 @@ const btnRight = document.querySelector('.slider__btn--right');
 const dotContainer = document.querySelector('.dots');
 let curSlide = 0;
 const maxSlide = Slides.length;
-const createDots = function () {};
+const createDots = function () {
+  Slides.forEach((s, i));
+};
 const goToSlide = function (slide) {
   Slides.forEach(
     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
