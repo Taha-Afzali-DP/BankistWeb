@@ -313,8 +313,13 @@ const createDots = function () {
     );
   });
 };
-const activaiteDot = function () {
-  document.querySelector('.dots__dot--active');
+const activaiteDot = function (slide) {
+  document
+    .querySelectorAll('dots__dot')
+    .entries.forEach(dot => dot.classList.remove('.dots__dot--active'));
+  document
+    .querySelector(`.dots__dot[data-slide="${slide}"]`)
+    .classList.add('dots__dot--active');
 };
 createDots();
 const goToSlide = function (slide) {
