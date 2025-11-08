@@ -328,6 +328,14 @@ const activateDot = function (slide) {
     .querySelector(`.dots__dot[data-slide="${slide}"]`)
     .classList.add('dots__dot--active');
 };
+
+////////////*
+const init = function () {
+  goToSlide(0);
+  createDots();
+  activateDot(0);
+};
+init();
 //* Next slide
 const nextSlide = function () {
   if (curSlide === maxSlide - 1) {
@@ -360,8 +368,3 @@ dotContainer.addEventListener('click', function (e) {
     activateDot(slide);
   }
 });
-const init = function () {
-  goToSlide(0);
-  createDots();
-  activateDot(0);
-};
