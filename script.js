@@ -303,7 +303,6 @@ const Slides = document.querySelectorAll('.slide');
 const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
 const dotContainer = document.querySelector('.dots');
-const activaiteDot = document.querySelector('.dots__dot--active');
 let curSlide = 0;
 const maxSlide = Slides.length;
 const createDots = function () {
@@ -313,6 +312,9 @@ const createDots = function () {
       `<button class="dots__dot" data-slide="${i}"></button>`
     );
   });
+};
+const activaiteDot = function () {
+  document.querySelector('.dots__dot--active');
 };
 createDots();
 const goToSlide = function (slide) {
