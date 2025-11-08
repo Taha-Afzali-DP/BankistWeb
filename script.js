@@ -306,7 +306,12 @@ const dotContainer = document.querySelector('.dots');
 let curSlide = 0;
 const maxSlide = Slides.length;
 const createDots = function () {
-  Slides.forEach((s, i));
+  Slides.forEach(function (_, i) {
+    dotContainer.insertAdjacentHTML(
+      'beforeend',
+      `<button class="dots_dot" data-slide="${i}"></button>`
+    );
+  });
 };
 const goToSlide = function (slide) {
   Slides.forEach(
