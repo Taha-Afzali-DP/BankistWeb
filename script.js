@@ -336,6 +336,7 @@ const nextSlide = function () {
     curSlide++;
   }
   goToSlide(curSlide);
+  activaiteDot(curSlide);
 };
 const prevSlide = () => {
   if (curSlide === 0) {
