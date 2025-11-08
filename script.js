@@ -314,7 +314,6 @@ const createDots = function () {
   });
 };
 
-createDots();
 const goToSlide = function (slide) {
   Slides.forEach(
     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
@@ -329,8 +328,6 @@ const activateDot = function (slide) {
     .querySelector(`.dots__dot[data-slide="${slide}"]`)
     .classList.add('dots__dot--active');
 };
-activateDot(0);
-goToSlide(0);
 //* Next slide
 const nextSlide = function () {
   if (curSlide === maxSlide - 1) {
@@ -363,3 +360,8 @@ dotContainer.addEventListener('click', function (e) {
     activateDot(slide);
   }
 });
+const init = function () {
+  goToSlide(0);
+  createDots();
+  activateDot(0);
+};
