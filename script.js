@@ -377,3 +377,4 @@ slider();
 document.addEventListener('DOMContentLoaded', function () {
   // alert('hello');
 });
+//! ***Load***
