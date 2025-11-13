@@ -382,6 +382,8 @@ window.addEventListener('load', function () {
   // this.alert('loaded');
 });
 //! ***beforeunloaded***
-window.addEventListener('beforeunloaded', e => {
+window.addEventListener('beforeunload', function (e) {
   e.preventDefault();
+  console.log(e);
+  e.returnValue = '';
 });
