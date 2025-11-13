@@ -378,3 +378,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // alert('hello');
 });
 //! ***Load***
+window.addEventListener('load', function () {
+  // this.alert('loaded');
+});
