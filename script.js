@@ -371,3 +371,5 @@ const slider = function () {
   });
 };
 slider();
+
+//TODO ***Events***
