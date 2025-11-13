@@ -381,3 +381,7 @@ document.addEventListener('DOMContentLoaded', function () {
 window.addEventListener('load', function () {
   // this.alert('loaded');
 });
+//! ***beforeunloaded***
+window.addEventListener('beforeunloaded', e => {
+  e.preventDefault();
+});
