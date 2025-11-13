@@ -373,6 +373,7 @@ const slider = function () {
 slider();
 
 //TODO ***Events***
+//! DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function () {
   // alert('hello');
 });
